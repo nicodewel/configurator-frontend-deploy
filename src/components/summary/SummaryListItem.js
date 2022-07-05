@@ -10,11 +10,8 @@ const SummaryListItem = ({ attribute }) => {
                         {attribute.thumbnailUrl ?
                             <div className="w-25"><button className="color-button" style={{ "background": `url(${process.env.REACT_APP_FRONTEND_URL}${attribute.thumbnailUrl}.webp")`, "backgroundSize": "52px 52px" }}></button></div>
                             : <div className="w-25"><button className="color-button" style={{ "opacity": "0" }}></button></div>}
-                        <div className="col-4"><strong> {attribute.priceInCents == 0 ? "kein Aufpreis" : ` Preis inkl. MwSt. ${attribute.priceInCents / 100}€`}</strong></div>
-
-
+                        <div className="col-4"><strong> {attribute.priceInCents === 0 ? "kein Aufpreis" : ` Preis inkl. MwSt. ${attribute.priceInCents / 100}€`}</strong></div>
                     </div>
-
                 </div>
                 : ""}
 
